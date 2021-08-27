@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Family Book</title>
+    </head>
+    <body>
+        <script>
+
+            var images = 
+            ["https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.gbrITVOHpQMdiqYxXB4lOgHaEK%26pid%3DApi&f=1", 
+            "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.2JAGY7SI8DUryGzLWF1trgHaEK%26pid%3DApi&f=1", 
+            "https://cdn.cdnparenting.com/articles/2019/03/13145953/1301649067-H.jpg"];
+
+            var names = 
+            ["Son","Father","Mother"];
+
+            var i = 0;
+
+            function update(){
+                i++;
+                var number_of_family_members = 3;
+                if(i > number_of_family_members)
+                {
+                    i = 0;                   
+
+                }
+                var updated_image = images[i];
+                    var updated_name = names[i];
+                    document.getElementById("family_member_image").src = updated_image;
+                    document.getElementById("family_member_name").innerHTML = updated_name;
+            }
+
+        </script>
+        <img id="family_member_image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.gbrITVOHpQMdiqYxXB4lOgHaEK%26pid%3DApi&f=1">
+        <h4 id="family_member_name">Son</h4>
+        <button onclick="update()">Next</button>
+    </body>
+</html>
